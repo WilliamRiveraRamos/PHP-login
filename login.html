@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+	
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+		<h1>Login</h1>	   
+		<form action="check-login.php" method="post">                           	
+			<div class="form-group">        
+			<input type="email" class="form-control input-lg" name="email" placeholder="Email" required>        
+			</div>
+			
+			<div class="form-group">        
+			<input type="password" class="form-control input-lg" name="password" placeholder="Password" required>       
+			</div>
+			<br />     
+			<button type="submit" class="btn btn-primary">LOGIN &raquo;</button>        
+			<br />
+		</form>		
+		</div>
+		
+		<div class="col-sm-6">
+		<h1>Register</h1>
+		Not register yet? <a href="register-form.html" title="Register Here">Register here!</a>
+		<hr>
+		
+		<!-- Password Retrive -->
+		<p class='descripcion'>¿Forgot your password?</p>	
+		<a class='btn btn-outline-danger' role='button' data-toggle='collapse' href='#showForm' aria-expanded='false' aria-controls='collapse'>Yes, I forgoted it.</a>
+
+		<div class="collapse" id="showForm">
+			<div class='well'>
+				<form action="retrive-password.php" method="post">
+					<div class="form-group">
+					<label for="Email">Email</label>
+					<input type="email" class="form-control" name="email" required>
+					<span class="help-block">(Enter the email associate with the password.)</span>
+					</div>			
+					<button type="submit" class="btn btn-primary">Retrive Password &raquo;</button>
+				</form>
+				</div>
+			</div>	
+		</div>
+	</div><!-- /.row -->
+</div><!-- /.container -->
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+	</body>
+</html>
