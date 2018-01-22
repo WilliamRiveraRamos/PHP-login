@@ -1,6 +1,15 @@
 <?php
+
+// localhost or IP
 $dbhost	= "localhost";
+
+// daabase username
 $dbuser	= "root";
-$dbpass	= "";
+
+// database password
+$dbpass	= "";			
+
+// database name
 $dbname	= "PHPLogin";
+
 ?>
