@@ -48,7 +48,7 @@
 					  <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
 					  Email was send!<br>
 					  <br><br>
-					  <a class='alert-link' href=login.php>Login</a>
+					  <a class='alert-link' href=login.html>Login</a>
 					</div>";
 			}			
 			else{
