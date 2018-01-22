@@ -3,6 +3,7 @@ session_start();
 ?>
 
 <!doctype html>
+
 <html lang="en">
   <head>
     <title>Check Login</title>
@@ -20,6 +21,7 @@ session_start();
   <div class="container">
   
 <?php
+
 include 'conn.php';
 				
 	$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
@@ -45,9 +47,7 @@ include 'conn.php';
 		$_SESSION['email'] = $email;		
 		$_SESSION['name'] = $row['Name'];	
 		$_SESSION['start'] = time();
-		$_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
-
-		print_r($_SESSION);
+		$_SESSION['expire'] = $_SESSION['start'] + (5 * 60);		
 		
 		echo "<br><div class='alert alert-success' role='alert'><strong>Welcome!</strong> $row[Name]
 			<br><br><a href='logout.php'>Logout</a></div>";
