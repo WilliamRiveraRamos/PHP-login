@@ -11,7 +11,8 @@
   </head>
 <body>
 
-<div class="container">  
+<div class="container">
+
 	<?php
 
 	include 'conn.php';
@@ -21,7 +22,22 @@
 	// Check connection
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
-	}			
+	}
+	
+	// Check if Email already exist
+	$checkEmail = "SELECT * FROM users
+	 WHERE Email = '$_POST[email]' ";
+
+	 $result = $conn-> query($checkEmail);
+
+	 $count = mysqli_num_rows($result);
+
+	 if ($count == 1) {
+	 echo "<br />". "That email is already in our database." . "<br />";
+
+	 echo "<a href='login.html'>Please Retrive your Password here</a>.";
+	 }
+	 else{	
 					
 	$name = $_POST['name'];
 	$email = $_POST['email'];
@@ -29,7 +45,7 @@
 
 	$passHash = password_hash($pass, PASSWORD_DEFAULT);
 
-	$query = "INSERT INTO Users (Name, Email, Password) VALUES ('$name', '$email', '$passHash')";
+	$query = "INSERT INTO users (Name, Email, Password) VALUES ('$name', '$email', '$passHash')";
 
 	if (mysqli_query($conn, $query)) {
 		echo "<br><div class='alert alert-success' role='alert'><h3>Registration Successful.</h3> <a class='btn btn-outline-primary' href='login.html' role='button'>Login</a></div>";
@@ -37,7 +53,7 @@
 		} else {
 			echo "Error: " . $query . "<br>" . mysqli_error($conn);
 		}	
-		
+	}	
 	mysqli_close($conn);			
 
 	?>
