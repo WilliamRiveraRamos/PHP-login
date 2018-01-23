@@ -1,2 +1,2 @@
 # PHP-login
-A simple PHP login made with PHP, MySQL, phpMyAdmin and some Bootstrap.
+A simple PHP login Web App with SESSIONS, Password hash and password recovery made with PHP, MySQL, phpMyAdmin and Bootstrap.
