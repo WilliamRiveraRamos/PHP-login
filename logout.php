@@ -4,6 +4,6 @@ session_start();
 session_unset($_SESSION['email']);
 session_destroy();
 
-header('Location: http://www.williamrivera.me');
+header('Location: ../PHPLogin/');
 
 ?>

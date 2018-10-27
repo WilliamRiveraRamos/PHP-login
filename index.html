@@ -2,49 +2,50 @@
 
 <html lang="en">
   <head>
-    <title>Registration Form</title>
+    <title>Create an account or Login</title>
     
 	<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
   
   <div class="container">
-	<div class="row">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>PHP MySQL login</h1>
+				<p>A simple PHP login Web App with SESSIONS, and Password hash made with MySQL, phpMyAdmin and Bootstrap.</p>		
+		</div>	
+	</div>
 	
-		<div class="col-sm-6">
+	<div class="row">	
+		<div class="col-sm-12 col-md-6 col-lg-6">
 		
-		<hr /><h1>Registration</h1><hr />
+		<h3>Create an account</h3><hr />
 		
-		<form method="post" action="register-form-db.php">
-		<div class="form-group">
-			<label for="Name">Your Name</label>
-			<input type="text" class="form-control" name="name" placeholder="Enter your name" required>			
+		<form method="post" action="create-account.php" method="POST">
+			<div class="form-group">				
+				<input type="text" class="form-control" name="name" placeholder="Enter your name" required>			
 		  </div>
 		  
-		  <div class="form-group">
-			<label for="Email">Email address</label>
-			<input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-		  </div>
+		  <div class="form-group">				
+				<input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter your email" required>
+			</div>
 		  
-		  <div class="form-group">
-			<label for="Password">Password</label>
-			<input type="password" class="form-control" name="password" placeholder="Password" required>
-		  </div>
+		  <div class="form-group">				
+				<input type="password" class="form-control" name="password" placeholder="Create Password" required>
+			</div>
 		  
-		  <button type="submit" class="btn btn-primary">Submit</button>
-		</form>	
-		
-		</div>
-		
-		<div class="col-sm-6">
-			<hr /><h1>Login</h1><hr />
-			Already have an account? <a href="login.html" title="Login Here">Login here!</a>		
+		  <button type="submit" class="btn btn-success btn-block">Create my account</button>
+		</form>		
+		</div>		
+		<div class="col-sm-12 col-md-6 col-lg-6">
+			<h3>Log in</h3><hr />
+			<p>Already have an account? <a href="login.html" title="Login Here">Login here!</a></p>
 		</div>
 	</div>
 </div>
@@ -53,5 +54,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
+ 
+	</body>
 </html>
