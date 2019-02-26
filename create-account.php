@@ -35,14 +35,15 @@
 
 	// If count == 1 that means the email is already on the database
 	if ($count == 1) {
-	echo "<br />". "That email is already in our database." . "<br />";
-
-	echo "<a href='login.html'>Please Retrive your Password here</a>.";
+	echo "<div class='alert alert-warning' role='alert'>
+					<p>That email is already in our database.</p>
+					<p><a href='login.html'>Please login here</a></p>
+				</div>";
 	} else {	
 	
 	/*
-	If the email don't exist, the data from the form is sended to the database
-	and the account is created
+	If the email don't exist, the data from the form is sended to the
+	database and the account is created
 	*/
 	$name = $_POST['name'];
 	$email = $_POST['email'];
@@ -64,8 +65,7 @@
 	mysqli_close($conn);
 	?>
 </div>
-
-<!-- Optional JavaScript -->
+	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
