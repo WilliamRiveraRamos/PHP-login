@@ -1,5 +1,5 @@
 # PHP-login
-A simple login Web App with SESSIONS and Password hash made with PHP, MySQL, phpMyAdmin and Bootstrap.
+A login App with SESSIONS, Password hash, and Password recovery made with PHP 7, MySQL, phpMyAdmin, and Bootstrap.
 
 How to use it?
 
