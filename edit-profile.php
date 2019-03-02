@@ -18,7 +18,8 @@ session_start();
   <body>      
     <?php
     if (isset($_SESSION['loggedin'])) {  
-    } else {
+    }
+    else {
         echo "<div class='alert alert-danger' role='alert'>
         <h4>You need to login to access this page.</h4>
         <p><a href='login.html'>Login Here!</a></p></div>";
