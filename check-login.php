@@ -53,12 +53,12 @@ session_start();
 				$_SESSION['start'] = time();
 				$_SESSION['expire'] = $_SESSION['start'] + (1 * 60) ;						
 				
-				echo "<div class='alert alert-success' role='alert'><strong>Welcome!</strong> $row[Name]			
+				echo "<div class='alert alert-success mt-4' role='alert'><strong>Welcome!</strong> $row[Name]			
 				<p><a href='edit-profile.php'>Edit Profile</a></p>	
 				<p><a href='logout.php'>Logout</a></p></div>";	
 			
 			} else {
-				echo "<div class='alert alert-danger' role='alert'>Email or Password are incorrects!
+				echo "<div class='alert alert-danger mt-4' role='alert'>Email or Password are incorrects!
 				<p><a href='login.html'><strong>Please try again!</strong></a></p></div>";			
 			}	
 			?>
