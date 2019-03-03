@@ -7,10 +7,15 @@ How to use it?
 2. Click phpMyAdmin on the menu.
 3. Create a new database "phplogin".
 4. Create table "users" with 4 fields*:
+
     Id - mediumint, Primary Key, AUTO_INCREMENT
+    
     Name - varchar
+    
     Email - varchar
+    
     Password - varchar(128)
+    
 *See screenshoot name table-users-Capture.jpg
 
 5. Download or clone this repo.
