@@ -35,7 +35,7 @@
 
 	// If count == 1 that means the email is already on the database
 	if ($count == 1) {
-	echo "<div class='alert alert-warning' role='alert'>
+	echo "<div class='alert alert-warning mt-4' role='alert'>
 					<p>That email is already in our database.</p>
 					<p><a href='login.html'>Please login here</a></p>
 				</div>";
@@ -56,7 +56,7 @@
 	$query = "INSERT INTO users (Name, Email, Password) VALUES ('$name', '$email', '$passHash')";
 
 	if (mysqli_query($conn, $query)) {
-		echo "<div class='alert alert-success' role='alert'><h3>Your account has been created.</h3>
+		echo "<div class='alert alert-success mt-4' role='alert'><h3>Your account has been created.</h3>
 		<a class='btn btn-outline-primary' href='login.html' role='button'>Login</a></div>";		
 		} else {
 			echo "Error: " . $query . "<br>" . mysqli_error($conn);
