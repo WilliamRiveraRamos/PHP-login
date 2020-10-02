@@ -29,8 +29,8 @@ session_start();
 			}
 			
 			// data sent from form login.html 
-			$email = $_POST['email']; 
-			$password = $_POST['password'];
+			$email = mysqli_real_escape_string($conn, $_POST['email']); 
+			$password = mysqli_real_escape_string($conn, $_POST['password']);
 			
 			// Query sent to database
 			$result = mysqli_query($conn, "SELECT Email, Password, Name FROM users WHERE Email = '$email'");
